@@ -19,11 +19,12 @@
  */
 function createSongElement({ id, title, album, artist, duration, coverArt }) {
     const children = [
-        createElement("p", title, [], {}),
-        createElement("p", album, [], {}),
-        createElement("p", artist, [], {}),
-        createElement("p", durationFormat(duration), [], {}),
         createElement("img", [], [], { src: coverArt }),
+        createElement("span", title +" | ", [], {}),
+        createElement("span", album+" | ", [], {}),
+        createElement("span", artist+" | ", [], {}),
+        createElement("span", durationFormat(duration), ["duration"], {}, ),
+        
     ]
     const classes = []
     const attrs = { onclick: `playSong(${id})`, id: "song" + id }
@@ -35,9 +36,9 @@ function createSongElement({ id, title, album, artist, duration, coverArt }) {
  */
 function createPlaylistElement({ id, name, songs }) {
     const children = [
-        createElement("p", name, [], {}),
-        createElement("p", [songs.length], [], {}),
-        createElement("p", playlistDuration(id), [], {}),
+        createElement("span", name+" | ", [], {}),
+        createElement("span", [songs.length], [], {}),
+        createElement("span", playlistDuration(id), ["duration"], {}),
     ]
     const classes = []
     const attrs = {}

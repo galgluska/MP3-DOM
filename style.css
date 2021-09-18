@@ -1,11 +1,11 @@
 /* Your code here */
 
 .playing {
-    color: rgb(126, 255, 249);
+    color: rgb(15, 187, 178);
 }
 
 body {
-    background-color: darkcyan;
+    background-color: rgba(49, 160, 141, 0.938);
     font-weight: bold;
     font-size: 20px;
     display: flex;
@@ -19,6 +19,7 @@ img {
     width: 80px;
     height: 80px;
     border-radius: 5%;
+    
 }
 
 #list {
@@ -27,4 +28,34 @@ img {
     flex-direction: column;
     align-items: center;
     line-height: 1.5rem;
+}
+
+.duration {
+    float: right;
+}
+
+div {
+
+    border-color:white;
+    border-style: double;
+    border-width: 1px;
+    
+}
+
+header {
+    font-size: 60px;
+    text-align: center;
+}
+
+.play-song-button{
+    float: right;
+}
+
+.remove-song-button{
+    float: right;
+}
+h2 {
+
+    font-family: 60px;
+    text-align: center;
 }
