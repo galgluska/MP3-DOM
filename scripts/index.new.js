@@ -91,9 +91,9 @@ function handleAddSongEvent(event) {
 function createSongElement({ id, title, album, artist, duration, coverArt }) {
     const children = [
         createElement("img", [], ["border-Img"], { src: coverArt }),
-        createElement("span",  title +" | ", [], {}),
+        createElement("span",  " " + title +" | ", [], {}),
         createElement("span",  album + " | ", [], {}),
-        createElement("span",  artist + " | ", [], {}),
+        createElement("span",  artist + "  ", [], {}),
         createElement("span",  durationFormat(duration), ["duration"], {}),
         createElement("button", ["▶️"], ["play-song-button"], {}),
         createElement("button", ["❌"], ["remove-song-button"], {}),
@@ -109,7 +109,7 @@ function createSongElement({ id, title, album, artist, duration, coverArt }) {
 function createPlaylistElement({ id, name, songs }) {
     const children = [
         createElement("span",  name + " | ", [], {}),
-        createElement("span",  [songs.length]+ " songs | ", [], {}),
+        createElement("span",  [songs.length]+ " songs  ", [], {}),
         createElement("span",  playlistDuration(id), ["duration"], {}),
     ]
     const classes = ["child"]
